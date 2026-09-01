@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Livros & Estudos</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+body{
+    background:#f4f6f9;
+    color:#333;
+}
+header{
+    background:#1f3c88;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+.container{
+    max-width:900px;
+    margin:30px auto;
+    padding:20px;
+}
+.card{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    margin-bottom:20px;
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+h2{
+    margin-bottom:15px;
+    color:#1f3c88;
+}
+input{
+    width:100%;
+    padding:12px;
+    margin-bottom:10px;
+    border:1px solid #ccc;
+    border-radius:6px;
+}
+button{
+    background:#1f3c88;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:6px;
+    cursor:pointer;
+}
+button:hover{
+    background:#16306d;
+}
+.item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:10px;
+    border-bottom:1px solid #eee;
+}
+.item:last-child{
+    border:none;
+}
+.excluir{
+    background:#d62828;
+    padding:8px 12px;
+}
+.progress{
+    height:18px;
+    background:#ddd;
+    border-radius:20px;
+    overflow:hidden;
+    margin-top:10px;
+}
+.progress div{
+    height:100%;
+    background:#2a9d8f;
+    width:0%;
+    color:white;
+    font-size:12px;
+    text-align:center;
+    line-height:18px;
+}
+footer{
+    text-align:center;
+    padding:20px;
+    color:#777;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Livros & Estudos</h1>
+    <p>Organize suas leituras e acompanhe seus estudos</p>
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <h2>Adicionar Livro</h2>
+
+        <input id="titulo" placeholder="Título do livro">
+
+        <input id="autor" placeholder="Autor">
+
+        <input id="paginas" type="number" placeholder="Total de páginas">
+
+        <button onclick="adicionarLivro()">Salvar</button>
+    </div>
+
+    <div class="card">
+        <h2>Minhas Leituras</h2>
+        <div id="lista"></div>
+    </div>
+
+    <div class="card">
+        <h2>Meta de Estudo</h2>
+
+        <input id="meta" type="number" placeholder="Horas de estudo da semana">
+
+        <input id="realizadas" type="number" placeholder="Horas concluídas">
+
+        <button onclick="calcular()">Atualizar</button>
+
+        <div class="progress">
+            <div id="barra">0%</div>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+Projeto desenvolvido em HTML, CSS e JavaScript
+</footer>
+
+<script>
+let livros = JSON.parse(localStorage.getItem("livros")) || [];
+
+function salvar(){
+    localStorage.setItem("livros", JSON.stringify(livros));
+}
+
+function mostrarLivros(){
+
+    const lista = document.getElementById("lista");
+    lista.innerHTML = "";
+
+    if(livros.length===0){
+        lista.innerHTML="<p>Nenhum livro cadastrado.</p>";
+        return;
+    }
+
+    livros.forEach((livro, i)=>{
+
+        lista.innerHTML += `
+        <div class="item">
+            <div>
+                <strong>${livro.titulo}</strong><br>
+                ${livro.autor}<br>
+                ${livro.paginas} páginas
+            </div>
+            <button class="excluir" onclick="remover(${i})">Excluir</button>
+        </div>`;
+    });
+}
+
+function adicionarLivro(){
+
+    const titulo=document.getElementById("titulo").value;
+    const autor=document.getElementById("autor").value;
+    const paginas=document.getElementById("paginas").value;
+
+    if(!titulo || !autor || !paginas){
+        alert("Preencha todos os campos.");
+        return;
+    }
+
+    livros.push({titulo, autor, paginas});
+
+    salvar();
+    mostrarLivros();
+
+    titulo.value="";
+    autor.value="";
+    paginas.value="";
+}
+
+function remover(i){
+    livros.splice(i,1);
+    salvar();
+    mostrarLivros();
+}
+
+function calcular(){
+
+    const meta=Number(document.getElementById("meta").value);
+    const feitas=Number(document.getElementById("realizadas").value);
+
+    if(meta<=0){
+        alert("Informe uma meta válida.");
+        return;
+    }
+
+    let porcentagem=Math.min((feitas/meta)*100,100);
+
+    const barra=document.getElementById("barra");
+    barra.style.width=porcentagem+"%";
+    barra.innerHTML=Math.round(porcentagem)+"%";
+}
+
+mostrarLivros();
+</script>
+
+</body>
+</html>
