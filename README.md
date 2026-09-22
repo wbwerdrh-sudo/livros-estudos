@@ -31,11 +31,8 @@ Este projeto faz parte da minha experiência como estudante e da área de **Dese
 
 ## 🌐 Acesso ao projeto
 
-🔗 **GitHub:**  
-https://github.com/wbwerdrh-sudo/wbwerdrh-sudo
-
 🔗 **Projeto online:**  
-https://wbwerdrh-sudo.github.io/wbwerdrh-sudo/
+content://com.google.android.apps.search.assistant.surfaces.voice.robin.fileprovider/attachments/index.html
 
 > O endereço online depende da publicação do projeto pelo GitHub Pages.
 
