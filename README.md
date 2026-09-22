@@ -32,7 +32,7 @@ Este projeto faz parte da minha experiência como estudante e da área de **Dese
 ## 🌐 Acesso ao projeto
 
 🔗 **Projeto online:**  
-content://com.google.android.apps.search.assistant.surfaces.voice.robin.fileprovider/attachments/index.html
+https://wbwerdrh-sudo.github.io/livros-estudos/?utm_source=chatgpt.com
 
 > O endereço online depende da publicação do projeto pelo GitHub Pages.
 
