@@ -1,29 +1,54 @@
-👋 Olá, eu sou Werderh Nayron!
+# 📚 Biblioteca Digital
 
-🎓 Tenho 18 anos e sou estudante do CETI São João Batista, em São João da Varjota – PI.
+## 📖 Sobre o projeto
 
-💻 Tenho interesse em tecnologia e desenvolvimento de sistemas, buscando aprender cada vez mais sobre programação e criação de projetos.
+A **Biblioteca Digital** é um projeto desenvolvido com o objetivo de facilitar o acesso a materiais de estudo de forma simples, organizada e prática.
 
-📚 Biblioteca Digital
+A proposta é reunir conteúdos digitais em um único espaço, permitindo que estudantes encontrem materiais de apoio para seus estudos com mais facilidade.
 
-Um dos meus projetos é a Biblioteca Digital, um aplicativo criado com uma proposta simples: facilitar o acesso e a organização de conteúdos e materiais digitais em um único espaço.
+O projeto foi desenvolvido como uma aplicação simples, buscando apresentar uma interface intuitiva e de fácil utilização.
 
-O nome Biblioteca Digital faz referência justamente à sua principal finalidade: funcionar como uma biblioteca em formato digital, de maneira simples e prática.
+## 🎯 Objetivo
 
-🎯 Objetivo
+O principal objetivo da Biblioteca Digital é oferecer uma alternativa prática para organização e acesso a materiais educacionais digitais, contribuindo para uma experiência de estudo mais organizada.
 
-Criar uma experiência simples e organizada para reunir conteúdos digitais, tornando sua consulta mais prática.
+## ✨ Principais características
 
-🚀 Sobre mim
+- 📚 Organização de materiais digitais;
+- 🔎 Facilidade para encontrar conteúdos;
+- 💻 Interface simples e intuitiva;
+- 📱 Possibilidade de acesso por diferentes dispositivos;
+- 🎓 Foco no apoio aos estudos;
+- 🗂️ Organização das informações de forma clara.
 
-Sou estudante e estou construindo minha trajetória na área de tecnologia por meio dos estudos e da criação de projetos.
+## 👨‍💻 Desenvolvedor
 
-Este GitHub reúne alguns dos meus trabalhos, experiências e projetos desenvolvidos ao longo dessa jornada.
+**Werderh Nayron Dantas de Sousa**
+
+Estudante do **CETI São João Batista**, em São João da Varjota – PI.
+
+Este projeto faz parte da minha experiência como estudante e da área de **Desenvolvimento de Sistemas**.
+
+## 🌐 Acesso ao projeto
+
+🔗 **GitHub:**  
+https://github.com/wbwerdrh-sudo/wbwerdrh-sudo
+
+🔗 **Projeto online:**  
+https://wbwerdrh-sudo.github.io/wbwerdrh-sudo/
+
+> O endereço online depende da publicação do projeto pelo GitHub Pages.
+
+## 🛠️ Tecnologias
+
+As tecnologias utilizadas no desenvolvimento do projeto estão presentes nos arquivos do repositório.
+
+## 📌 Considerações finais
+
+A Biblioteca Digital representa uma proposta de utilização da tecnologia para facilitar a organização e o acesso a materiais de estudo.
+
+O projeto também serve como uma oportunidade de aplicar conhecimentos adquiridos durante o curso de **Desenvolvimento de Sistemas**, envolvendo organização, programação e desenvolvimento de aplicações.
 
 ---
 
-📍 São João da Varjota – Piauí, Brasil
-
-🎓 CETI São João Batista
-
-💻 Estudante de Desenvolvimento de Sistemas
+⭐ **Projeto desenvolvido para fins educacionais.**
